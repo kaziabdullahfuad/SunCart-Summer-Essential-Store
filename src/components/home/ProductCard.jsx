@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
     return (
 
         <div>
-           <Image src={product.image} alt={product.name} width={100} height={100}></Image>
+           <Image src={product.image} alt={product.name} width={200} height={200}></Image>
         </div>
     );
 };

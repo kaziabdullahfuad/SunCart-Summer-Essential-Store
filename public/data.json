@@ -7,7 +7,7 @@
     "rating": 4.7,
     "stock": 12,
     "description": "Stylish UV protection sunglasses perfect for sunny outdoor activities.",
-    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+    "image": "https://i.ibb.co.com/cXrhPsjf/sunglassjpg.jpg",
     "category": "Accessories"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.5,
     "stock": 25,
     "description": "Lightweight and breathable cotton t-shirt ideal for hot weather.",
-    "image": "https://ibb.co.com/jk2JP2RY",
+    "image": "https://i.ibb.co.com/23QZ1QNr/tshirt.jpg",
     "category": "Clothing"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.8,
     "stock": 18,
     "description": "Protects your skin from harmful UV rays while keeping it hydrated.",
-    "image": "https://ibb.co.com/ymskMWSd",
+    "image": "https://i.ibb.co.com/KcysQFwb/sunscreentwo.jpg",
     "category": "Skincare"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.4,
     "stock": 20,
     "description": "Comfortable and durable sandals perfect for beach and casual wear.",
-    "image": "https://ibb.co.com/0j0DFb3y",
+    "image": "https://i.ibb.co.com/kgLH9CF2/sandals.jpg",
     "category": "Footwear"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.6,
     "stock": 15,
     "description": "Wide-brim straw hat to keep you cool and protected from the sun.",
-    "image": "https://ibb.co.com/ZzGbMgZr",
+    "image": "https://i.ibb.co.com/VYJkqCKG/hat.jpg",
     "category": "Accessories"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.7,
     "stock": 30,
     "description": "Keeps your drinks cold for hours, perfect for summer hydration.",
-    "image": "https://ibb.co.com/V0CFFxrH",
+    "image": "https://i.ibb.co.com/JWpYYq0x/water-bottle.jpg",
     "category": "Essentials"
   }
 ]
