@@ -11,10 +11,10 @@ const PopularProducts =async () => {
     
 
     return (
-        <div className='lg:w-10/12 mx-auto mt-10'>
+        <div className='lg:w-10/12 mx-auto mt-10 mb-5'>
             <h2 className='text-[#181A2E] text-3xl font-bold mb-2'>Popular Products </h2>
             <p className='text-[#877462] mb-8'>Handpicked favorites for the golden season</p>
-            <div>
+            <div className='grid md:grid-cols-3  gap-4'>
                  {
                     products.slice(0,3).map((product)=>{
                         
