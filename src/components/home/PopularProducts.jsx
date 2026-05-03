@@ -6,7 +6,7 @@ const PopularProducts =async () => {
     const res=await fetch('https://sun-cart-summer-essential-store.vercel.app/data.json');
     const products=await res.json();
 
-    console.log(products.length);
+    // console.log(products.length);
     
     
 
