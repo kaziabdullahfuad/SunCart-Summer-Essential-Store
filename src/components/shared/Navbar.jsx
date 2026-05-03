@@ -7,7 +7,7 @@ import logo from "@/assets/suncart.png";
 const Navbar = () => {
     return (
         <div className='bg-[#F9F7F2] shadow-sm'>
-            <div className="w-10/12 mx-auto navbar ">
+            <div className="md:w-10/12 mx-auto navbar ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
