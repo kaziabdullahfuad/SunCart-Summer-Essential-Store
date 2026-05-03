@@ -15,7 +15,7 @@ const ProductsPage = async() => {
                 <p className='text-[#5E5E5B]'>Curated collection for your perfect golden hour. Discover high-end fashion, skincare, and beach accessories designed for the modern sun-seeker.</p>
                 </div>
 
-                <div className='grid md:grid-cols-3  gap-4'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3  gap-4'>
                     {
                         products.map((product)=>{
 
