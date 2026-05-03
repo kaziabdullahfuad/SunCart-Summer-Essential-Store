@@ -6,7 +6,7 @@ import { IoIosStar } from "react-icons/io";
 
 const ProductCard = ({product}) => {
 
-    console.log(product);
+    // console.log(product);
     
     return (
 

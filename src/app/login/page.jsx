@@ -11,6 +11,11 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
+import { GrGoogle } from "react-icons/gr";
+import { TbPackage } from "react-icons/tb";
+import { toast } from "react-toastify";
+
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -31,14 +36,24 @@ export default function SignInPage() {
     console.log(data,error, "Aije amar data and error");
 
     if(error){
-        alert(error.message)
+        // alert(error.message)
+        toast.error(error.message);
     }
 
     if(data){
-        alert("Login Successful");
+        // alert("Login Successful");
+        toast.success("Login Successful");
+        
     }
 
   };
+
+  const handleGoogleSignIn=async ()=>{
+    
+        await authClient.signIn.social({
+          provider: "google",
+      });
+  }
 
   return (
     <Card className="border-y-2 shadow-md border-orange-400 mx-auto w-70 md:w-100 lg:w-125 py-1 lg:py-10 mt-5">
@@ -95,13 +110,19 @@ export default function SignInPage() {
         <div className="flex gap-2">
           <Button type="submit" className='bg-[#FF9F1C]'>
             <Check />
-            Submit
+            Login
           </Button>
           <Button type="reset" variant="secondary">
             Reset
           </Button>
         </div>
       </Form>
+      
+       <p className="text-center">If you dont have an account. Please <Link className="text-blue-500" href={'/register'}>Register</Link></p>  
+      <p className="text-center">Or</p>
+
+      <Button onClick={handleGoogleSignIn}  className={'text-center mx-auto w-full'}><GrGoogle></GrGoogle> Sign in with Google</Button>
+
     </Card>
   );
 }

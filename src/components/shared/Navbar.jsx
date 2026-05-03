@@ -1,10 +1,23 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
 import Navlink from './Navlink';
 import Image from 'next/image';
 import logo from "@/assets/suncart.png";
+import { authClient } from '@/lib/auth-client';
+import {Avatar} from "@heroui/react";
 
 const Navbar = () => {
+
+  const userData=authClient.useSession()
+  // console.log(userData,"User Info");
+  const user=userData.data?.user
+  // console.log(user);
+
+  const handleSignOut=async()=>{
+    await authClient.signOut();
+  }
+
     return (
         <div className='bg-[#F9F7F2] shadow-sm'>
             <div className="md:w-10/12 mx-auto navbar ">
@@ -43,9 +56,30 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <button className='btn bg-[#FF9F1C] text-white rounded-full'>
+    
+  {!user &&  <div>
+        <button className='btn bg-[#FF9F1C] text-white rounded-full'>
         <Link href={'/login'}>Login</Link>
     </button>
+
+      <button className='btn bg-[#FF9F1C] text-white rounded-full'>
+          <Link href={'/register'}>Register</Link>
+      </button>
+    </div> }
+
+    {
+      user && <div className='flex items-center gap-2'>
+        <Avatar>
+        <Avatar.Image  alt="John Doe" src={user?.image} referrerPolicy='no-referrer' />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
+      
+        <button onClick={handleSignOut} className='btn bg-[#FF9F1C] text-white rounded-full'>Log Out</button>
+
+      </div>
+    }
+    
+
   </div>
 </div>
         </div>

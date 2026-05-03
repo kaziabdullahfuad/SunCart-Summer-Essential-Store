@@ -12,6 +12,8 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
 
@@ -38,20 +40,29 @@ export default function SignUpPage() {
     console.log(data,error, "Aije amar data and error");
 
     if(error){
-        alert(error.message)
+        // alert(error.message)
+        toast.error(error.message);
     }
 
     if(data){
-        alert("Signup Successful");
+        // alert("Signup Successful");
+         toast.success("Sign up Successful");
         router.push('/');
     }
 
   };
 
+  const handleGoogleSignIn=async ()=>{
+    
+        await authClient.signIn.social({
+          provider: "google",
+      });
+  }
+
   return (
     <Card className="border-y-2 shadow-md border-orange-400 mx-auto w-70 md:w-100 lg:w-125 py-1 lg:py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Welcome to <span className='text-[#FF9F1C] '>Suncart</span></h1>
-    <p className="text-center mb-5">Experience the warmth of premium summer essentials.</p>
+    <p className="text-center mb-5">Register to Experience the warmth of premium summer essentials.</p>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -113,13 +124,20 @@ export default function SignUpPage() {
         <div className="flex gap-2">
           <Button type="submit" className='bg-[#FF9F1C]'>
             <Check />
-            Submit
+            Register
           </Button>
           <Button type="reset" variant="secondary">
             Reset
           </Button>
         </div>
       </Form>
+
+      
+     
+      <p className="text-center">Or</p>
+
+      <Button onClick={handleGoogleSignIn}  className={'text-center mx-auto w-full'}><GrGoogle></GrGoogle> Sign in with Google</Button>
+
     </Card>
   );
 }
