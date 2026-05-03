@@ -34,7 +34,7 @@ const ProductCard = ({product}) => {
             </div>
 
            <button className='btn border-[#006A62] text-[#006A62] rounded-full'>
-                    <Link href={'/product/details'}>View Details</Link>
+                    <Link href={`/products/${product.id}`}>View Details</Link>
             </button>
             
           
