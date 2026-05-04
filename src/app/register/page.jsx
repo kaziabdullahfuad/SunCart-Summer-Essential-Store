@@ -48,7 +48,8 @@ export default function SignUpPage() {
     if(data){
         // alert("Signup Successful");
          toast.success("Sign up Successful");
-        router.push('/');
+        // router.push('/');
+        window.location.href="/"
     }
 
   };
