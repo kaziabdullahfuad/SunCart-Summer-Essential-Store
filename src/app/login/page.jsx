@@ -29,7 +29,7 @@ export default function SignInPage() {
     const {data,error}=await authClient.signIn.email({
         email,
         password,
-        callbackURL: '/'
+        // callbackURL: '/'
         
     })
 
@@ -43,6 +43,7 @@ export default function SignInPage() {
     if(data){
         // alert("Login Successful");
         toast.success("Login Successful");
+        window.location.href="/"
         
     }
 
