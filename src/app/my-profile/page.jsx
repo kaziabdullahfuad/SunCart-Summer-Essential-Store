@@ -4,18 +4,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Avatar } from "@heroui/react";
 import { UpdateUserModal } from "@/components/home/UpdateUserModal";
+import { useRouter } from "next/router";
 
 const MyProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
+  const router=useRouter();
+
   // if (userData.isLoading) {
   //   return <p className="text-center mt-10">Loading...</p>;
   // }
 
-  // if (!user) {
-  //   return <p className="text-center mt-10">Loading...</p>;
-  // }
+  if (!user) {
+    // return <p className="text-center mt-10">Loading...</p>;
+    router.push('/login');
+  }
 
   return (
     <div className="flex justify-center items-center mt-10">
