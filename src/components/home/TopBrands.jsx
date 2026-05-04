@@ -10,6 +10,7 @@ const TopBrands = () => {
                 <p className='text-[#5E5E5B]'>Trusted names in summer fashion and care</p>
                 </div>
 
+                
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     
                   
@@ -40,6 +41,7 @@ const TopBrands = () => {
                     </div>
 
                 </div>
+                
             </div>
         </div>
     );

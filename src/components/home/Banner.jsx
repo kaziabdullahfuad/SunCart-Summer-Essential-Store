@@ -19,8 +19,8 @@ const Banner = () => {
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
       <span className="bg-[#FF9F1C] rounded-full p-3 w-fit border">Hot Deals</span>
-      <h1 className="mb-5 text-5xl font-bold mt-4">Summer Sale <span className="text-[#FF9F1C]"> 50% OFF</span></h1>
-      <p className="mb-5">
+      <h1 className="mb-5 text-5xl font-bold mt-4 animate__animated animate__bounce">Summer Sale <span className="text-[#FF9F1C]"> 50% OFF</span></h1>
+      <p className="mb-5 animate__animated animate__fadeInUp">
         Embrace the warmth of the season with our curated collection of high-end summer essentials. From sun-ready skincare to iconic beachwear.
       </p>
       <button className="btn bg-[#FF9F1C] text-white font-semibold">

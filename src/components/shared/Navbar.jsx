@@ -6,8 +6,11 @@ import Image from 'next/image';
 import logo from "@/assets/suncart.png";
 import { authClient } from '@/lib/auth-client';
 import {Avatar} from "@heroui/react";
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+
+  const router = useRouter()
 
   const userData=authClient.useSession()
   // console.log(userData,"User Info");
@@ -15,7 +18,9 @@ const Navbar = () => {
   // console.log(user);
 
   const handleSignOut=async()=>{
+
     await authClient.signOut();
+    router.push('/'); // redirect to home page
   }
 
     return (

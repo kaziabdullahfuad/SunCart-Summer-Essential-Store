@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { ToastContainer, toast } from 'react-toastify';
+import 'animate.css';
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
