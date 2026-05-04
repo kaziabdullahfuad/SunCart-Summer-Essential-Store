@@ -5,20 +5,43 @@ import Image from "next/image";
 import { Avatar } from "@heroui/react";
 import { UpdateUserModal } from "@/components/home/UpdateUserModal";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const MyProfilePage = () => {
-  const userData = authClient.useSession();
-  const user = userData.data?.user;
+  // const userData = authClient.useSession();
+  // const user = userData.data?.user;
 
-  const router=useRouter();
+  // const router=useRouter();
 
   // if (userData.isLoading) {
   //   return <p className="text-center mt-10">Loading...</p>;
   // }
 
+  // if (!user) {
+  //   // return <p className="text-center mt-10">Loading...</p>;
+  //   router.push('/login');
+  // }
+
+  // ekdom notun agula
+  const { data: session, isLoading } = authClient.useSession();
+  const user = session?.user;
+  const router = useRouter();
+
+  // Client-side protection
+  useEffect(() => {
+    if (!isLoading && !user) {
+      router.replace("/login");   // use replace instead of push
+    }
+  }, [isLoading, user, router]);
+
+  // Show loading while checking session
+  if (isLoading) {
+    return <p className="text-center mt-10">Loading profile...</p>;
+  }
+
+  // If no user after loading → show fallback (safety)
   if (!user) {
-    // return <p className="text-center mt-10">Loading...</p>;
-    router.push('/login');
+    return <p className="text-center mt-10">Redirecting to login...</p>;
   }
 
   return (
