@@ -9,13 +9,13 @@ const MyProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  if (userData.isLoading) {
-    return <p className="text-center mt-10">Loading...</p>;
-  }
+  // if (userData.isLoading) {
+  //   return <p className="text-center mt-10">Loading...</p>;
+  // }
 
-  if (!user) {
-    return <p className="text-center mt-10">Loading...</p>;
-  }
+  // if (!user) {
+  //   return <p className="text-center mt-10">Loading...</p>;
+  // }
 
   return (
     <div className="flex justify-center items-center mt-10">
