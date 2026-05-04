@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 import { toast } from "react-toastify";
@@ -132,7 +133,7 @@ export default function SignUpPage() {
         </div>
       </Form>
 
-      
+       <p className="text-center">If you already have an account. Please <Link className="text-blue-500" href={'/login'}>Login</Link></p>  
      
       <p className="text-center">Or</p>
 
