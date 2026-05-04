@@ -7,6 +7,7 @@ import logo from "@/assets/suncart.png";
 import { authClient } from '@/lib/auth-client';
 import {Avatar} from "@heroui/react";
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
 
@@ -21,6 +22,7 @@ const Navbar = () => {
 
     await authClient.signOut();
     router.push('/'); // redirect to home page
+    toast.success("Successfully Logged out");
   }
 
     return (
