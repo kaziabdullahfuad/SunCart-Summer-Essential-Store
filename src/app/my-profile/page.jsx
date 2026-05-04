@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Avatar } from "@heroui/react";
 import { UpdateUserModal } from "@/components/home/UpdateUserModal";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const MyProfilePage = () => {
   const userData = authClient.useSession();
